@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div style="margin-top:55px">
+    <h1 style="color:red;text-align:center;">UserName or Password is Incorrect. Click below to Try again.</h1>
+    <h4 style="text-align:center;">
+
+            @Html.ActionLink("Click Me To LogIn", "Login", "Account")
+
+    </h4>
+</div>
+<div class="footer">
+    <p>&copy; 2020 User Login Form</p>
+</div>
+
+<link href="~/style/Error.css" rel="stylesheet" />

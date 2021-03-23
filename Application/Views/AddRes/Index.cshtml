@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Application.Models.resource>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Resource List</h2>
+
+<p>
+    @Html.ActionLink("Add New Resource List", "Create")
+</p>
+<h4 class="text-success">@TempData["msg"]</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.images)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subjects)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descriptions)
+        </th>
+        <th>
+            @Html.DisplayName("Actions")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@Url.Content(item.images)" width="75" height="75" class="img-rounded" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subjects)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.years)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descriptions)
+        </td>
+        <td>
+            @Html.ActionLink("Update", "Edit", new { id=item.re_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.re_id })
+        </td>
+    </tr>
+}
+
+</table>

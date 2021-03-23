@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="heading"><h1>@Html.ActionLink("Teacher-Student", "Index", "Home")</h1></div>
+        <img src="~/images/humanpictos.png" alt="TeacherStudentConnect" class="image" />
+    </div>
+    <div>
+
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <p style="margin-top: -8px;">&copy; 2020 - My Teacher-Student-Connect Application</p>
+    </div>
+    <link href="~/style/styleLogin.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7c191d90db.js" crossorigin="anonymous"></script>
+</body>
+</html>

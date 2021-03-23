@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="heading"><h1>@Html.ActionLink("Teacher-Student", "Index", "Home")</h1></div>
+        <img src="~/images/humanpictos.png" alt="TeacherStudentConnect" class="image" />
+
+    </div>
+
+    <div class="contain">
+        <div class="row custom_margin">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="~/images/checking.png" class="card-img-top" alt="user" /> </br>
+                    <div class="card-body background_class user_class">
+                        @Html.ActionLink("Add Resources", "Create", "AddRes")
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="~/images/responsive.png" class="card-img-top" alt="user" /> </br>
+                    <div class="card-body background_class user_class">
+                        @Html.ActionLink("Resources List", "Index", "AddRes")
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="~/images/globe.png" class="card-img-top" alt="user" /> </br>
+                    <div class="card-body background_class user_class">
+                        @Html.ActionLink("Search List", "Index", "Search")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center;" class="logout_div">
+        <i class="fas fa-sign-out-alt"></i>
+        @Html.ActionLink("Log out", "", "")
+    </div>
+    @RenderBody()
+    <div class="footer">
+        <p style="margin-top: 15px;">&copy; 2020 - My Teacher-Student-Connect Application</p>
+    </div>
+    <link href="~/style/Style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+</body>
+</html>

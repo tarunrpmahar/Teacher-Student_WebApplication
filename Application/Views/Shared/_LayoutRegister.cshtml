@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="heading"><h1>@Html.ActionLink("Teacher-Student", "Index", "Home")</h1></div>
+        <img src="~/images/humanpictos.png" alt="TeacherStudentConnect" class="image" />
+
+    </div>
+
+    <div class="contain">
+        <div class="flex">
+            <div class="row" style="margin-left:-228px;justify-content:center;">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="~/images/user.png" class="card-img-top" alt="user" /> </br>
+                        <div class="card-body user_class">
+
+                            @Html.ActionLink("User Register", "NewUser", "NewRegistration")
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="~/images/computer.png" class="card-img-top" alt="admin" /> </br>
+                        <div class="card-body user_class">
+                            @Html.ActionLink("Admin Register", "NewAdmin", "NewRegAdmin")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" style="margin-left:-8px">
+        <p style="margin-top:15px">&copy; 2020 Register Form</p>
+    </div>
+    @RenderBody()
+
+    <link href="~/style/Style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+</body>
+</html>

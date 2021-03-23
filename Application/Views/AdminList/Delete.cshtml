@@ -1,0 +1,16 @@
+﻿@model Application.Models.AdminClass
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+    <h3 style="text-align:center;">Admin request declined</h3>
+    <p style="text-align:center;">@Html.ActionLink("Click here to try again", "Register", "Home")</p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        @*@Html.ActionLink("Admin request declined Click ", "Index", "Home")*@
+    </div>
+}

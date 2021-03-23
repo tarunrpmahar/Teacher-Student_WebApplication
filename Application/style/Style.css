@@ -1,0 +1,146 @@
+﻿.top-nav {
+    background-color: #00909e;
+    padding: 15px;
+    margin-top: -8px;
+    height: 60px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.heading > h1 > a {
+    color: white;
+    /*font-size: 20px;*/
+}
+
+    .heading > h1 > a:hover {
+        color: darkblue;
+        /*font-size: 20px;*/
+        text-decoration: none;
+    }
+
+body {
+    background-color: #f0f0f0 !important;
+}
+
+.fa-angle-double-right {
+    color: black;
+}
+
+.heading > h1 {
+    float: left;
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.custom_margin.custom_margin.custom_margin {
+    margin-top: 100px;
+}
+
+.user_class.user_class > a {
+    background: #588da8;
+    color: white;
+}
+
+    .user_class.user_class > a:hover {
+        color: lightyellow;
+    }
+
+.card-body > a {
+    background-color: white;
+    color: white;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.logout_div {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+}
+
+    .logout_div > a {
+        color: white;
+        font-size: 20px;
+    }
+
+        .logout_div > a:hover {
+            color: darkblue;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+.image {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.row_class {
+    height: 60px;
+    background-color: #dae1e7;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+    .row_class:first-child {
+        margin-top: 140px;
+    }
+
+.row a {
+    color: black;
+    text-decoration: none;
+    line-height: 56px;
+}
+
+    .row a:hover {
+        text-decoration: none;
+        color: orangered;
+    }
+
+row_class:hover {
+    border-bottom: 5px solid orangered;
+}
+
+.row img {
+    height: 50px;
+    width: 50px;
+}
+
+.register {
+    float: right;
+    font-size: 20px;
+}
+
+.footer.footer {
+    position: fixed;
+    background: #00909e;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 58px;
+    bottom: 0px;
+}
+
+.registerform {
+    margin-top: 10px;
+}
+
+.bootbutton {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+div.container.container {
+    margin-left: 200px !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* background-color: #1e2125; */
+}
+
+div.contain.contain {
+    margin-left: 255px !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* background-color: #1e2125; */
+}

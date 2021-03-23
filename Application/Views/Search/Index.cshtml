@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Application.Models.resource>
+
+<h2 style="text-align:center;">Searching in Resource List</h2>
+
+<div>
+    @using (Html.BeginForm("Index", "Search", FormMethod.Get))
+    {
+        @Html.TextBox("search", null, htmlAttributes: new { @class = "form-control" })
+        @Html.RadioButton("SearchBy", "title", true)<text>Title</text>
+        @Html.RadioButton("SearchBy", "subjects", false)<text>Subject</text>
+
+        <input type="Submit" value="Search"class="btn btn-primary" />
+    }
+</div>
+</br>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.images)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subjects)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descriptions)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@Url.Content(item.images)" height="75" width="75" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subjects)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.years)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descriptions)
+            </td>
+        </tr>
+    }
+
+</table>
+<h3>@ViewBag.msg</h3>
+

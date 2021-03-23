@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<!--header-->
+<!--//header-->
+<!--main-->
+<div class="flex">
+    <div class="card">
+        <div class="card-header">
+            <h6>Admin Login Form</h6>
+        </div>
+        <div class="card-body">
+            <form action="Verify" method="post">
+                <span>User Name:</span><br />
+                <input placeholder="Enter User Name" class="form-control" name="Name" class="user" type="text" required=""><br>
+                <span>Password:</span>
+                <input placeholder="Enter Password" name="Password" class="form-control" type="password" required=""><br>
+                <div class="flex">
+                    <input type="submit" class="btn btn-info" value="LogIn">
+                </div>
+            </form>
+            <h6 style="text-align:center;color:red;margin-top: 10px;">No account? @Html.ActionLink("Create one", "NewAdmin", "NewRegAdmin")</h6>
+
+        </div>
+    </div>
+</div>
+<!--//main-->
+<!--footer-->
+@*<div class="footer">
+    <p>&copy; 2020 Admin Login Form</p>
+</div>*@
+

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="heading"><h1>Teacher-Student</h1></div>
+        <img src="~/images/humanpictos.png" alt="TeacherStudentConnect" class="image" />
+
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div class="footer" style="margin-left:-8px;">
+        <p style="margin-top:15px">&copy; 2020 Register Form</p>
+    </div>
+
+    <link href="~/style/Style.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

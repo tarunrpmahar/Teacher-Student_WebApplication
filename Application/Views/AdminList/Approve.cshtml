@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Approve</title>
+    <link href="~/style/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="top-nav" style="height:41px;">
+        <div class="heading"><h1>Teacher-Student</h1></div>
+        <img src="~/images/humanpictos.png" alt="TeacherStudentConnect" class="image" />
+    </div>
+    <div>
+        <h1 style="text-align:center;">Admin is Approved by SuperUser Now you can Login as an Admin.</h1>
+        <h3 style="text-align:center; color:red;">@Html.ActionLink("Go to Admin Login", "Login", "Admin")</h3>
+    </div>
+    <div class="footer" style="margin-left: -8px;">
+        <p>&copy; 2020 Admin Login Form</p>
+    </div>
+</body>
+</html>

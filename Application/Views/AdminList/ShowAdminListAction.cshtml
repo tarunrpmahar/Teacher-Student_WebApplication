@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Application.Models.AdminClass>
+
+@{
+    ViewBag.Title = "ShowAdminListAction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<div class="top-nav">
+    <div class="heading"><h1>Teacher-Student</h1></div>
+    <img src="~/images/humanpictos.png" alt="TeacherStudentConnect" class="image" />
+
+</div>*@
+
+<h2 style="text-align:center;">Admin List</h2>
+
+
+@*<div style="margin-left:274px">*@
+<table class="table">
+    @*cellpadding="20"*@
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>*@
+        <th>
+            @Html.DisplayName("Action")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>*@
+            <td>
+                @Html.ActionLink("Approve", "Approve", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Decline", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    @*<link href="~/style/Style.css" rel="stylesheet" />*@
+</table>
+@*</div>*@
